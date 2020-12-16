@@ -1,0 +1,78 @@
+import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.math.*;
+
+/*<applet code="Balls" height=900 width=900>
+</applet>*/
+
+class Ball
+{
+      int x,y,dx,dy,size;
+      Color BallColor;
+       
+      public Ball(int x,int y,int size,int dx,int dy,Color bColor)
+        {
+               this.x=x;
+               this.y=y;
+               this.size=size;
+               this.dx=dx;
+               this.dy=dy;
+             
+               BallColor=bColor;
+         }
+}
+public class Balls extends Applet implements Runnable
+{
+    Ball greenBall;
+  
+    public void init()
+     {
+            greenBall=new Ball(100,200,20,2,3,Color.green);
+            Thread t = new Thread(this);
+            t.start();
+      }
+
+     
+    public void paint(Graphics g)
+    {
+     g.setColor(greenBall.BallColor);
+     g.fillOval(greenBall.x,greenBall.y,greenBall.size,greenBall.size);
+    }
+   public void run()
+   {
+    while(true)
+    {
+           
+              try
+                   {
+                         displacementOperation(greenBall);
+                         Thread.sleep(5);
+                         repaint();
+                    }
+
+
+         catch(Exception e){}
+      }
+      }
+
+        public void displacementOperation(Ball ball)
+          {     
+                 if(ball.x>=500 || ball.x<=0) 
+                            {
+                                   ball.dx=-ball.dx;
+                             }
+               
+                               ball.x=ball.x+ball.dx; 
+
+                 if(ball.y>=500 || ball.y<=0) 
+                            {
+                                   ball.dy=-ball.dy;
+                             }
+               
+                               ball.y=ball.y+ball.dy; 
+            }
+}
+
+
+    

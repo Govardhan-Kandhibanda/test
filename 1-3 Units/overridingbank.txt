@@ -1,0 +1,44 @@
+class RBI
+{
+  void display()
+  { System.out.println("IR=5%");}
+}
+
+class SBI extends RBI
+{
+  void display()
+  { System.out.println("IR=6%");}
+}
+
+class ICICI extends RBI
+{
+  void display()
+  { System.out.println("IR=7%");}
+}
+
+class HDFC extends RBI
+{
+  void display()
+  { System.out.println("IR=8%");}
+}
+
+class AB extends RBI
+{
+  void display()
+  { System.out.println("IR=9%");}
+}
+
+class overridingbank
+{
+  public static void main(String[] args)
+  { 
+    SBI o1 = new SBI();
+    o1.display();
+    ICICI o2 = new ICICI();
+    o2.display();
+    HDFC o3 = new HDFC();
+    o3.display();
+    AB o4 = new AB();
+    o4.display();
+  }
+}

@@ -1,0 +1,41 @@
+class Gparent
+{
+  int x;
+  Gparent(int a)
+  {
+    x=a;
+  }
+}
+
+class Parent extends Gparent
+{
+  int y;
+  Parent(int a,int b)
+  {
+    super(a);
+    y=b;
+  }
+}
+class Child extends Parent 
+{
+  int z;
+  Child(int a,int b,int c)
+  {
+    super(a,b);
+    z=c;
+  }
+  void display()
+  {
+    System.out.println(x+" "+y+" "+z);
+  }
+
+}
+
+class supTest1
+{
+ public static void main(String[] args)
+ {
+  Child r1=new Child(2,3,4);
+  r1.display();
+ }
+}  

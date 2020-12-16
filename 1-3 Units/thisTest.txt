@@ -1,0 +1,27 @@
+class Item
+{
+  int icode;
+  int iprice;
+  Item(int icode,int iprice)
+  {
+   this.icode=icode;
+   this.iprice=iprice;
+  }
+  void display()
+  {
+    System.out.println(icode+" "+iprice);
+  }
+}
+
+class thisTest
+{
+  public static void main(String[] args)
+  {
+   Item o1 = new Item(1,5);
+   Item o2 = new Item(2,10);
+   o1.display();
+   o2.display();
+  }
+}
+
+   

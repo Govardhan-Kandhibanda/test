@@ -1,0 +1,28 @@
+class overloading
+{
+  int add(int x,int y)
+  {
+    return(x+y);
+  }
+  int add(int x,int y,int z)
+  {
+    return(x+y+z);
+  }
+  int add(int x,int y,int z,int a)
+  {
+    return(x+y+z+a);
+  }
+}
+
+class overloadingTest
+{
+  public static void main(String[] args)
+  {
+    int X,Y,Z;
+    overloading o=new overloading();
+    X=o.add(1,2);
+    Y=o.add(1,2,3);
+    Z=o.add(1,2,3,4);
+    System.out.println(X+" "+Y+" "+Z);
+  }
+}

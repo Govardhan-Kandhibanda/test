@@ -1,0 +1,70 @@
+import java.awt.*;
+import java.awt.event.*;
+class AwtApplication7 extends Frame implements ActionListener
+{
+   TextField tf1,tf2;
+   Button b1,b2;
+   AwtApplication7()
+   {
+      setLayout(new BorderLayout());
+      setSize(300,300);
+      Panel p1=new Panel();
+      Panel p2=new Panel();//optional
+      Panel p3=new Panel();//optional
+      Panel p4=new Panel();
+
+      Label l1=new Label("Number");
+      Label l2=new Label("Result");
+
+      tf1 = new TextField(20);
+      tf2 = new TextField(20);
+
+      b1 = new Button("Factorial");
+      b2 = new Button("Exit");
+      
+      p1.add(l1);
+      p1.add(tf1);
+      p1.add(l2);
+      p1.add(tf2);
+      p4.add(b1);
+      p4.add(b2);
+     
+      
+      add(p1,BorderLayout.NORTH);
+      add(p2,BorderLayout.WEST);       //optional
+      add(p3,BorderLayout.CENTER); //optional
+      add(p4,BorderLayout.SOUTH);
+     
+      b1.addActionListener(this);
+      b2.addActionListener(this);
+      setVisible(true);
+   }
+  public static void main(String args[])
+  {
+    AwtApplication7 f = new AwtApplication7();
+  }
+
+  public void actionPerformed(ActionEvent ae)
+  {
+    int n = Integer.parseInt(tf1.getText());
+    double res=0;
+     if(ae.getSource()==b1)
+     { 
+        int i;
+        double f=1;
+        for(i=1;i<=n;i++)
+        {
+           f=f*i;
+        }
+        res=f;
+     }
+     if(ae.getSource()==b2)
+    {
+      System.exit(0);
+    }
+    tf2.setText(String.valueOf(res));
+  }
+ }   
+ 
+ 
+      

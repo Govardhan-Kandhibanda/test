@@ -1,0 +1,25 @@
+class P
+{
+  void display()
+  { 
+    System.out.println("I am super");
+  }
+}
+class C extends P
+{
+  void display()
+  {
+   System.out.println("I am child and super");
+  }
+}
+
+class overridingTest
+{
+  public static void main(String[] args)
+  {
+   C o1 = new C();
+   P o2 = new P();
+   o1.display();
+   o2.display();
+  }
+} 

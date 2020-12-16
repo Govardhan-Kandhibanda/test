@@ -1,0 +1,54 @@
+interface A
+{
+  final String kt="T";
+  abstract void cal();
+} 
+
+interface B
+{
+  final String kr="r";
+  abstract void cal();
+}
+interface C
+{
+  final String ki="i";
+  abstract void cal();
+}
+interface D
+{
+  final String kv="v";
+  abstract void cal();
+}
+interface E
+{
+  final String kk="k";
+  abstract void cal();
+}
+interface F
+{
+  final String ka="a";
+  abstract void cal();
+}
+interface G
+{
+  final String km="m";
+  abstract void cal();
+}
+class H implements A,B,C,D,E,F,G
+{
+  public void cal()
+  {
+    System.out.println(kt+kr+ki+kv+ki+kk+kr+ka+km);
+  }
+
+}
+
+class nameInterfacetests
+{
+  public static void main(String[] args)
+  {
+    H ho=new H();
+    ho.cal();
+
+   }
+}

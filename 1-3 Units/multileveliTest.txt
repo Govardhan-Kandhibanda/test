@@ -1,0 +1,35 @@
+class Gparent
+{
+   void display1()
+  {
+    System.out.println("I am Gparent");
+  }
+}
+
+class Parent extends Gparent
+{
+   void display2()
+  {
+    System.out.println("I am Parent and Gparent");
+  }
+}
+class Child extends Parent 
+{
+  
+  void display3()
+  {
+    System.out.println("I am Child and Parent and Gparent");
+  }
+
+}
+
+class multileveliTest
+{
+ public static void main(String[] args)
+ {
+  Child r=new Child();
+  r.display1();
+  r.display2();
+  r.display3();
+ }
+}  

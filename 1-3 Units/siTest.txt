@@ -1,0 +1,24 @@
+class P
+{
+  void display1()
+  { 
+    System.out.println("I am super");
+  }
+}
+class C extends P
+{
+  void display2()
+  {
+   System.out.println("I am child and super");
+  }
+}
+
+class siTest
+{
+  public static void main(String[] args)
+  {
+   C o = new C();
+   o.display2();
+   o.display1();
+  }
+} 

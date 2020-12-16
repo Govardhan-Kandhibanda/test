@@ -1,0 +1,74 @@
+//multiple inheritence
+
+
+interface RBI
+{
+  abstract int getRateOfInterest(); 
+}
+
+class SBI implements RBI
+{
+  public int getRateOfInterest()
+  {
+    return(7); 
+  }
+}
+
+class HDFC implements RBI
+{
+  public int getRateOfInterest()
+  {
+    return(8); 
+  }
+}
+
+class ICICI implements RBI
+{
+  public int getRateOfInterest()
+  {
+    return(9); 
+  }
+}
+
+class AXIS implements RBI
+{
+  public int getRateOfInterest()
+  {
+    return(10);
+  }
+}
+
+class interfaceTestbank1
+{
+  public static void main(String[] args)
+  {
+    int x;
+    RBI r;
+    SBI so = new SBI();
+    r=so;
+    x=r.getRateOfInterest();
+    System.out.println(x);
+    HDFC ho = new HDFC();
+    r=ho;
+    x=r.getRateOfInterest();
+    System.out.println(x);
+    ICICI io = new ICICI();
+    r=io;
+    x=r.getRateOfInterest();
+    System.out.println(x);
+    AXIS ao = new AXIS();
+    r=ao;
+    x=r.getRateOfInterest();
+    System.out.println(x);
+   }
+}
+
+
+o/p:
+7
+8
+9
+10
+
+
+

@@ -1,0 +1,30 @@
+interface A
+{
+  final int x=5;
+  abstract void cal();
+} 
+
+interface B
+{
+  final int y=6;
+  abstract void cal();
+}
+
+class C implements A,B
+{
+  public void cal()
+  {
+   int z;
+   z=x+y;
+   System.out.println(z);
+  }
+} 
+
+class Multipleinterfacetest
+{
+  public static void main(String[] args)
+  {
+    C co = new C();
+    co.cal();   
+  }
+}

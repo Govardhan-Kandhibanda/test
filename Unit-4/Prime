@@ -1,0 +1,16 @@
+class Prime 
+{
+public static void main(string []args)
+{
+int n=5,i,c,j;
+for(i=1;i<=n;i++)
+{
+ c=0;
+{
+ c++;
+}
+}
+if (c==2)
+System.out.println(i);
+}
+}
